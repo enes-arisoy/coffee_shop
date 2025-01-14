@@ -1,0 +1,537 @@
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+}
+
+:root {
+    --main-color: #d3ad7f;
+    --black-color: #13131a;
+    --bg-color: #010103;
+    --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+}
+
+/* Proje içerisinde projenin tema assetleri root içerisinde tanımlanır.Bu sayede projenin içerisinde bu değerlere istenilen yerde erişilir.  */
+
+body {
+    font-family: "Roboto", serif;
+    color: white;
+    background-color: var(--bg-color);
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: 0.8rem;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: white !important;
+    border-radius: 5rem;
+}
+
+section {
+    padding: 2rem 7%;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.9rem 3rem;
+    font-size: 1.7rem;
+    background-color: var(--main-color);
+    color: white;
+    cursor: pointer;
+}
+
+.btn:hover {
+    scale: 1.1;
+}
+
+.heading {
+    text-align: center;
+    font-size: 4rem;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+}
+
+.heading span {
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+header {
+    background-color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    border-bottom: var(--border);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header .logo img {
+    height: 6rem;
+    border-radius: 50%;
+}
+
+header nav a {
+    color: white;
+    font-size: 1.6rem;
+    margin: 0 1rem;
+}
+
+header nav a:hover {
+    color: var(--main-color);
+    border-bottom: 0.1rem solid var(--main-color);
+}
+
+header .icons i {
+    font-size: 2.5rem;
+    color: white;
+    margin-left: 2rem;
+    cursor: pointer;
+}
+
+header .icons i:hover {
+    color: var(--main-color);
+}
+
+header .icons {
+    display: none;
+}
+
+.home {
+    background-image: url(./images/home.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.home .content {
+    max-width: 60rem;
+}
+
+.home .content h3 {
+    font-size: 6rem;
+    text-transform: uppercase;
+}
+
+.home .content p {
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    line-height: 1.8;
+    font-weight: lighter;
+    color: #eee;
+}
+
+.about .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about .row .image {
+    flex: 1 1 45rem;
+}
+
+.about .row .image img {
+    width: 100%;
+}
+
+.about .row .content {
+    flex: 1 1 45rem;
+    padding: 2rem;
+}
+
+.about .content h3 {
+    font-size: 3rem;
+}
+
+.about .content p {
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
+.menu .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.menu .box-container .box {
+    border: var(--border);
+    padding: 5rem;
+    text-align: center;
+    transition: all 0.4s;
+}
+
+.menu .box-container .box h3 {
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+.menu .box-container .box .price {
+    font-size: 2.5rem;
+    padding: 0.5rem 0;
+}
+
+.menu .box-container .box .price span {
+    font-size: 1.5rem;
+    font-weight: lighter;
+    text-decoration: line-through;
+}
+
+.menu .box-container .box img {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+}
+
+.menu .box-container .box:hover {
+    background-color: white;
+    color: black;
+}
+
+.products .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+    gap: 1.5rem;
+}
+
+.products .box-container .product-box {
+    border: var(--border);
+    padding: 2rem;
+    text-align: center;
+}
+
+.products .box-container .product-box .image {
+    padding: 2.5rem 0;
+}
+
+.products .box-container .product-box .image img {
+    height: 25rem;
+    width: 25rem;
+}
+
+.products .box-container .product-box .content h3 {
+    font-size: 2.5rem;
+}
+
+.products .box-container .product-box .stars {
+    padding: 1.5rem;
+}
+
+.products .box-container .product-box .stars i {
+    font-size: 1.7rem;
+    color: var(--main-color);
+}
+
+.products .box-container .product-box .content .price {
+    font-size: 2.5rem;
+}
+
+.products .box-container .product-box .content .price span {
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    font-weight: lighter;
+}
+
+.reviews .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.reviews .box-container .box {
+    border: var(--border);
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.reviews .box-container .box img {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    padding: 1rem;
+}
+
+.reviews .box-container .box p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: #ccc;
+    padding: 2rem;
+}
+
+.reviews .box-container .box h3 {
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+.reviews .box-container .box .stars i {
+    font-size: 1.5rem;
+    color: var(--main-color);
+}
+
+.contact .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    background-color: var(--black-color);
+}
+
+.contact .row .map {
+    flex: 1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.contact .row form {
+    flex: 1 1 45rem;
+    padding: 5rem 2rem;
+}
+
+.contact .row form h3 {
+    text-transform: uppercase;
+    font-size: 3.5rem;
+}
+
+.contact .row form .input-box {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0 2rem;
+    border: var(--border);
+}
+
+.contact .row form .input-box span {
+    font-size: 2rem;
+    padding-left: 2rem;
+}
+
+.contact .row form .input-box input {
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.7rem;
+    text-transform: none;
+    background: none;
+    color: white;
+}
+
+.contact .row form .input-box input::placeholder {
+    color: whitesmoke;
+}
+
+.btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-container .btn {
+    width: 100%;
+}
+
+.btn-container .btn:hover {
+    scale: 0.9;
+}
+
+.blogs .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.blogs .box-container .box {
+    border: var(--border);
+}
+
+.blogs .box-container .box:hover>.image img {
+    scale: 1.2;
+}
+
+.blogs .box-container .box .image {
+    height: 25rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+.blogs .box-container .box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.blogs .box-container .box img:hover {
+    scale: 1.2;
+}
+
+.blogs .box-container .content {
+    padding: 2rem;
+}
+
+.blogs .box-container .content h3 {
+    font-size: 2.5rem;
+    line-height: 1.5;
+    color: white;
+}
+
+.blogs .box-container .content h3:hover {
+    color: var(--main-color);
+}
+
+.blogs .box-container .content span {
+    color: var(--main-color);
+    display: block;
+    /* bulunduğu alanı kaplasın. */
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+.blogs .box-container .content p {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    padding: 1rem 0;
+    color: #ccc;
+}
+
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--black-color);
+    padding: 2rem;
+}
+
+footer .container .icons i {
+    border: var(--border);
+    border-radius: 50%;
+    padding: 1.3rem;
+    font-size: 2rem;
+    margin: 2rem 0.4rem;
+}
+
+footer .container .icons i:hover {
+    background-color: var(--main-color);
+    scale: 0.9;
+    cursor: pointer;
+}
+
+footer .container .menu-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    padding: 2rem 0;
+
+}
+
+footer .container .menu-links a {
+    border: var(--border);
+    margin: 0.4rem;
+    color: white;
+    font-size: 2rem;
+    padding: 0.7rem 2rem;
+}
+
+footer .container .menu-links a:hover {
+    background-color: var(--main-color);
+    scale: 0.9;
+    margin: 0.4rem;
+}
+
+footer .copyright {
+    padding: 1.5rem;
+    font-size: 2rem;
+    font-weight: lighter;
+}
+
+footer .copyright span {
+    color: var(--main-color);
+}
+
+@media screen and (max-width: 900px) {
+    header .icons {
+        display: block;
+    }
+
+    header nav {
+        position: absolute;
+        top: 120%;
+        right: 3%;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+        background-color: var(--bg-color);
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 0 10px var(--main-color);
+    }
+
+    header nav.active {
+        display: flex;
+    }
+
+    section {
+        padding: 2rem;
+    }
+
+    .home {
+        background-position: left;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .home .content h3 {
+        font-size: 4.5rem;
+    }
+
+    .about .row {
+        text-align: center;
+    }
+
+    .about .content h3 {
+        font-size: 2.5rem;
+    }
+
+    .about .content p {
+        font-size: 1.3rem;
+    }
+
+    .btn-container .btn {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header .icons i {
+        font-size: 2rem;
+    }
+
+    html {
+        font-size: 50%;
+    }
+}
